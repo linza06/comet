@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: comet-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: comet
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: devpass
+    ports:
+      - "5432:5432"
+    volumes:
+      - comet-db-data:/var/lib/postgresql/data
+
+volumes:
+  comet-db-data:
