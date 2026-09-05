@@ -2,7 +2,13 @@ import { Request, Response } from "express";
 import { computeCandidateStationRoutes } from "../services/routingService";
 import { TravelMode } from "../types/route";
 
-const VALID_TRAVEL_MODES: TravelMode[] = ["WALK", "BICYCLE", "TWO_WHEELER", "DRIVE"];
+const VALID_TRAVEL_MODES: TravelMode[] = [
+  "WALK",
+  "BICYCLE",
+  "TWO_WHEELER",
+  "DRIVE",
+  "AUTO"
+];
 
 export async function getCandidateStationRoutesHandler(
   req: Request,

@@ -6,7 +6,8 @@ const VALID_TRAVEL_MODES: TravelMode[] = [
   "WALK",
   "BICYCLE",
   "TWO_WHEELER",
-  "DRIVE"
+  "DRIVE",
+  "AUTO"
 ];
 
 export async function getRecommendationsHandler(

@@ -1,10 +1,13 @@
 import { NearbyStation } from "./station";
 
-export type TravelMode = "WALK" | "BICYCLE" | "TWO_WHEELER" | "DRIVE";
+export type TravelMode = "WALK" | "BICYCLE" | "TWO_WHEELER" | "DRIVE" | "AUTO";
 
 export interface RouteResult {
   durationSeconds: number | null;
   distanceMeters: number | null;
+  estimatedFare: number | null;
+  fareCurrency: "INR";
+  isEstimate: boolean;
   status: "OK" | "ZERO_RESULTS" | "ERROR" | "NO_KEY";
   error?: string;
 }
@@ -14,6 +17,9 @@ export interface CandidateStationRoute {
   travelMode: TravelMode;
   durationSeconds: number | null;
   distanceMeters: number | null;
+  estimatedFare: number | null;
+  fareCurrency: "INR";
+  isEstimate: boolean;
   status: "OK" | "ZERO_RESULTS" | "ERROR" | "NO_KEY";
   error?: string;
 }
